@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+ 
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Curso: Qué Hacer si Alguien se Atraganta</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #007bff; /* Azul profesional */
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            border-bottom: 5px solid #0056b3;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+
+        .step {
+            display: none; /* Ocultar todos los pasos inicialmente */
+            padding: 25px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .step.active {
+            display: block; /* Mostrar solo el paso activo */
+        }
+
+        .step h2 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+        }
+
+        .step h2 .icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+        .step p, .step ul {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .step ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .step ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .step ul li::before {
+            content: "➡️";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+        }
+
+        .nav-button {
+            background-color: #28a745; /* Verde para acción positiva */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #218838;
+        }
+
+        .nav-button.prev {
+            background-color: #6c757d; /* Gris para anterior */
+        }
+        .nav-button.prev:hover {
+            background-color: #5a6268;
+        }
+
+        .nav-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .warning, .error-common {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-size: 1em;
+            border-left-width: 5px;
+            border-left-style: solid;
+        }
+
+        .warning {
+            background-color: #fff3cd; /* Amarillo claro para advertencia */
+            border-color: #ffeeba;
+            color: #856404;
+        }
+        .warning strong {
+            color: #725503;
+        }
+
+        .error-common {
+            background-color: #f8d7da; /* Rojo claro para error */
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .error-common strong {
+            color: #61171d;
+        }
+
+
+        .summary {
+            background-color: #e6f7ff; /* Azul muy claro para resumen */
+            padding: 25px 30px;
+            border-top: 3px solid #007bff;
+        }
+
+        .summary h2 {
+            color: #0056b3;
+        }
+        .summary ul li::before {
+            content: "✅";
+            color: #28a745;
+        }
+
+        /* Estilos para móviles */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            .step h2 {
+                font-size: 1.5em;
+            }
+            .step p, .step ul {
+                font-size: 1em;
+            }
+            .nav-button {
+                padding: 10px 18px;
+                font-size: 0.9em;
+            }
+            .container {
+                margin: 10px;
+                border-radius: 0;
+            }
+        }
+
+    </style>
+    
+<main>
+        
+        
+    </main>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+
+
+        <a href="#" id="bannerLink">
+            <img src="mi_banner.jpg" alt="Banner Principal - IMAGEN 1" id="bannerImage">
+        </a>
+
+
+
+
+            
+            <h1>¡Ayuda! Alguien se está Atragantando</h1>
+        </header>
+
+        <!-- Paso 1: Reconocer el problema -->
+        <div class="step active" id="step-1">
+            <h2><span class="icon">🤔</span>Paso 1: ¿Se está atragantando de verdad?</h2>
+            <p>Primero, mira si la persona realmente necesita ayuda. A veces, solo es un poquito de tos.</p>
+            <p><strong>Señales de que SÍ necesita ayuda (atragantamiento grave):</strong></p>
+            <ul>
+                <li>No puede hablar, toser fuerte o respirar.</li>
+                <li>Hace ruidos raros al intentar respirar o no hace ningún ruido.</li>
+                <li>Se lleva las manos al cuello (¡es la señal universal!).</li>
+                <li>Su cara puede empezar a ponerse azul o morada.</li>
+            </ul>
+            <div class="warning">
+                <strong>¡OJO!</strong> Si la persona puede toser fuerte o hablar, ¡déjala que tosa! La tos es la mejor forma de sacar lo que molesta. Anímala a seguir tosiendo. No le des palmadas en la espalda todavía si está tosiendo con fuerza.
+                  
+        
+        </div>
+     
+        </div>
+
+        <!-- Paso 2: Animar a toser -->
+        <div class="step" id="step-2">
+            <h2><span class="icon">🗣️</span>Paso 2: ¡Anímale a toser! (Si puede)</h2>
+            <p>Si la persona está tosiendo o puede hacer algún ruido, ¡es una buena señal! Significa que el aire todavía pasa un poquito.</p>
+            <ul>
+                <li>Dile: "¡Sigue tosiendo! ¡Tose fuerte!"</li>
+                <li>No hagas nada más por ahora, solo anímala. La tos es su mejor defensa.</li>
+            </ul>
+            <p>Si la tos es débil, no puede respirar bien o deja de hacer ruidos, pasa al siguiente paso.</p>
+        </div>
+
+
+
+
+         
+
+        <!-- Paso 3: Golpes en la espalda -->
+        <div class="step" id="step-3">
+            <h2><span class="icon">🖐️</span>Paso 3: 5 Golpes en la Espalda (Si no puede toser o respirar)</h2>
+            <p>Esto es para adultos y niños mayores de 1 año. Si la persona no puede respirar, hablar o toser fuerte:</p>
+            <ol>
+                <li>Párate a un lado y un poco detrás de la persona.</li>
+                <li>Sostén su pecho con una mano e inclínala hacia adelante. Así, si el objeto sale, irá hacia afuera y no más adentro.</li>
+                <li>Con la base de tu otra mano (la parte más dura, cerca de la muñeca), dale <strong>5 golpes fuertes</strong> entre sus omóplatos (las paletas de la espalda).</li>
+            </ol>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJjbGlwMCI+CiAgICAgIDxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CiAgICA8IS0tIEJhY2sgYmxvd3MgZGlhZ3JhbSAtLT4KICAgIDwhLS0gUGVyc29uIGNoYW5naW5nIC0tPgogICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIxMCIgcj0iNSIgZmlsbD0iIzZDNkM2QyIvPgoKICAgIDxsaW5lIHgxPSIyNSIgeTE9IjE1IiB4Mj0iMjUiIHkyPSIzMCIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyNSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjIwIiB4Mj0iMzUiIHkyPSIyNSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjMwIiB4Mj0iMjAiIHkyPSI0MCIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjMwIiB4Mj0iMzAiIHkyPSI0MCIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgICA8IS0tIEhlbHBlciAtLT4KICAgIDxjaXJjbGUgY3g9IjM1IiBjeT0iMzAiIHI9IjMiIGZpbGw9IiMwMDdCRkYiLz4KICAgIDxyZWN0IHg9IjMzIiB5PSIzMyIgd2lkdGg9IjQiIGhlaWdodD0iNyIgZmlsbD0iIzAwN0JGRiIvPgoKICAgIDwhLS0gQmFjayBibG93IGFjdGlvbiAtLT4KICAgIDxwYXRoIGQ9Ik0zMCwyMCBDMzUsMTggNDAsMjIgNDAsMjUiIHN0cm9rZT0iIzI4QTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgICA8cG9seWdvbiBwb2ludHM9IjQxLDI0IDM4LDI4IDQ0LDI3IiBmaWxsPSIjMjhBNzQ1Ii8+CiAgICA8dGV4dCB4PSI0MiIgeT0iMTgiIGZvbnQtc2l6ZT0iNiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjMiIGZpbGw9ImJsYWNrIj41eDwvdGV4dD4KICA8L2c+Cjwvc3ZnPg==" alt="Diagrama de golpes en la espalda" style="display:block; margin:10px auto; max-width:150px; height:auto;">
+            <p>Después de los 5 golpes, mira si el objeto salió. Si no, pasa al siguiente paso.</p>
+            <div class="error-common">
+                <strong>¡Cuidado!</strong> No golpees en el cuello ni en la parte baja de la espalda. Siempre entre los omóplatos.
+            </div>
+
+            
+
+        </div>
+
+        <!-- Paso 4: Compresiones abdominales (Maniobra de Heimlich) -->
+        <div class="step" id="step-4">
+            <h2><span class="icon">🫂</span>Paso 4: 5 Apretones en la Barriga (Maniobra de Heimlich)</h2>
+            <p>Si los golpes en la espalda no funcionaron:</p>
+            <ol>
+                <li>Párate detrás de la persona y rodéala con tus brazos por la cintura.</li>
+                <li>Inclínala un poco hacia adelante.</li>
+                <li>Cierra una mano en forma de puño. Coloca el puño justo arriba del ombligo de la persona y debajo de las costillas.</li>
+                <li>Agarra tu puño con la otra mano.</li>
+                <li>Haz <strong>5 apretones rápidos y fuertes</strong> hacia adentro y hacia arriba. Imagina que quieres levantar a la persona.</li>
+            </ol>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDUwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJjbGlwMSI+CiAgICAgIDxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAxKSI+CiAgICA8IS0tIEhlaW1saWNoIGRpYWdyYW0gLS0+CiAgICA8IS0tIFBlcnNvbiBjaG9raW5nIC0tPgogICAgPGNpcmNsZSBjeD0iMjUiIGN5PSIxMCIgcj0iNSIgZmlsbD0iIzZDNkM2QyIvPgoKICAgIDxsaW5lIHgxPSIyNSIgeTE9IjE1IiB4Mj0iMjUiIHkyPSIzNSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyNSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjIwIiB4Mj0iMzUiIHkyPSIyNSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjM1IiB4Mj0iMjAiIHkyPSI0NSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyNSIgeTE9IjM1IiB4Mj0iMzAiIHkyPSI0NSIgc3Ryb2tlPSIjNkM2QzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KCiAgICA8IS0tIEhlbHBlciBoYW5kcyAtLT4KICAgIDxyZWN0IHg9IjE4IiB5PSIyOCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjUiIHJ4PSIyIiByeT0iMiIgZmlsbD0iIzAwN0JGRiIvPgoKICAgIDwhLS0gVGhydXN0IGFjdGlvbiAtLT4KICAgIDxwYXRoIGQ9Ik0yNSwzMCBMMjUsMjUgTTIzLDI3IEwyNywyNyIgc3Ryb2tlPSIjMjhBNzQ1IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iMjUsMjMgMjIsMjggMjgsMjgiIGZpbGw9IiMyOEE3NDUiLz4KICAgIDx0ZXh0IHg9IjMwIiB5PSIyMiIgZm9udC1zaXplPSI2IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuMyIgZmlsbD0iYmxhY2siPjV4PC90ZXh0PgoKICAgIDwhLS0gU3BlY2lhbCBjYXNlcyBub3RlIC0tPgogICAgPHRleHQgeD0iNSIgeT0iNDgiIGZvbnQtc2l6ZT0iMyI+KkFkYXB0YXIgZW1iYXJhemFkYXMvb2Jlc29zPC90ZXh0PgogIDwvZz4KPC9zdmc+" alt="Diagrama de maniobra de Heimlich" style="display:block; margin:10px auto; max-width:150px; height:auto;">
+            <div class="warning">
+                <strong>¡Importante!</strong> Si la persona es una mujer embarazada o alguien muy grande que no puedes rodear con tus brazos por la cintura, haz los apretones en el pecho. Pon tu puño en el centro del esternón (el hueso del pecho) y haz los apretones hacia atrás.
+            </div>
+
+
+
+        </div>
+
+        <!-- Paso 5: Repetir y Pedir Ayuda -->
+        <div class="step" id="step-5">
+            <h2><span class="icon">🔄📞</span>Paso 5: Repite y Pide Ayuda Profesional</h2>
+            <p>Si la persona sigue atragantada:</p>
+            <ul>
+                <li>Sigue alternando: <strong>5 golpes en la espalda</strong> y luego <strong>5 apretones en la barriga</strong>.</li>
+                <li>Continúa hasta que el objeto salga, la persona pueda respirar o toser, o hasta que pierda el conocimiento.</li>
+            </ul>
+            <p><strong>¡LLAMA A EMERGENCIAS 911 YA!</strong></p>
+            <ul>
+                <li>Si hay alguien más contigo, pídele que llame mientras tú ayudas.</li>
+                <li>Si estás solo, intenta hacer un ciclo de golpes y apretones y luego llama. ¡No esperes mucho!</li>
+            </ul>
+        </div>
+
+        <!-- Paso 6: Si pierde el conocimiento -->
+        <div class="step" id="step-6">
+            <h2><span class="icon">🛌 CPR</span>Paso 6: Si la Persona Pierde el Conocimiento</h2>
+            <p>Si la persona se desmaya y deja de responder:</p>
+            <ol>
+                <li>Con cuidado, acuéstala en el suelo boca arriba.</li>
+                <li><strong>Llama inmediatamente a emergencias</strong> si no lo has hecho ya. Diles que la persona está inconsciente y no respira normalmente.</li>
+                <li>Comienza compresiones torácicas (como en la Reanimación Cardiopulmonar - RCP). Coloca una mano sobre la otra en el centro del pecho y empuja fuerte y rápido (unas 100-120 veces por minuto).</li>
+                <li>Cada vez que abras la vía aérea para dar respiraciones (si sabes RCP), mira si ves el objeto en la boca. Si lo ves y puedes sacarlo FÁCILMENTE con un dedo, sácalo. Si no lo ves, NO metas los dedos a ciegas.</li>
+                <li>Sigue con las compresiones hasta que llegue la ayuda médica o la persona empiece a moverse.</li>
+            </ol>
+            <div class="error-common">
+                <strong>¡NUNCA!</strong> Metas los dedos en la boca de alguien que está atragantado y consciente para intentar sacar el objeto. Podrías empujarlo más adentro. Solo intenta sacarlo si la persona está inconsciente Y VES el objeto claramente.
+            </div>
+
+
+
+        </div>
+
+        <!-- Paso 7: Después del Atragantamiento -->
+        <div class="step" id="step-7">
+            <h2><span class="icon">🧑‍⚕️</span>Paso 7: Después de que el Objeto Salga</h2>
+            <p>¡Felicidades! Si el objeto salió y la persona respira bien, ¡has hecho un gran trabajo!</p>
+            <p>Pero, incluso si parece estar bien, es importante que:</p>
+            <ul>
+                <li>La persona sea revisada por un médico. Las maniobras (especialmente los apretones en la barriga) pueden causar lesiones internas.</li>
+                <li>Si tuvo tos persistente, dificultad para tragar, o siente que algo sigue ahí, debe ir al médico.</li>
+            </ul>
+        </div>
+
+        <!-- Resumen Final -->
+        <div class="step summary" id="step-summary">
+            <h2><span class="icon">✅</span>Resumen Rápido: ¡Qué Hacer!</h2>
+            <p>Si alguien se atraganta y NO PUEDE TOSER, HABLAR NI RESPIRAR:</p>
+            <ol>
+                <li><strong>Pregunta:</strong> "¿Te estás atragantando?" Si asiente o no puede hablar, actúa.</li>
+                <li><strong>5 Golpes en la Espalda:</strong> Inclínala hacia adelante y dale 5 golpes fuertes entre los omóplatos.</li>
+                <li><strong>5 Apretones Abdominales (Heimlich):</strong> Rodea su cintura desde atrás, puño sobre el ombligo, la otra mano encima, y 5 apretones rápidos hacia adentro y arriba.</li>
+                <li><strong>Repite:</strong> Alterna 5 golpes y 5 apretones hasta que el objeto salga o la persona respire.</li>
+                <li><strong>Llama a Emergencias:</strong> Lo antes posible (112 o tu número local).</li>
+                <li><strong>Si se Desmaya:</strong> Acuéstala y comienza RCP (compresiones en el pecho). Busca el objeto en la boca solo si lo ves al abrir para respiraciones.</li>
+            </ol>
+            <div class="warning">
+                <strong>Recuerda:</strong> Si la persona PUEDE TOSER FUERTE, anímala a seguir tosiendo. No hagas las maniobras.
+            </div>
+            <p>¡Saber esto puede salvar una vida! Considera tomar un curso completo de primeros auxilios.</p>
+        </div>
+
+        <div class="navigation-buttons">
+            <button class="nav-button prev" id="prevBtn" onclick="navigate(-1)" disabled>❮ Anterior</button>
+            <button class="nav-button" id="nextBtn" onclick="navigate(1)">Siguiente ❯</button>
+        </div>
+        <ul>
+                <li>Curso basado en guias de la Cruz Roja Internacional</li>
+        </ul>
+<ul>       
+    <h6>
+            GENTILEZA: Programa M.I.A. Bienvenidos al mundo de la Inteligencia Artificial-           
+            <br>Conducción Prof. Ing. DANIEL AMIDEI y OSVALDO CRESPO
+           FM LATIDOS 107.1 /        
+           Martes y Jueves de 20 a 21 hs.
+        </h6>
+</ul>
+
+
+
+    </div>
+
+    <script>
+        let currentStepIndex = 0;
+        const steps = document.querySelectorAll('.step');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const totalSteps = steps.length;
+
+        function showStep(index) {
+            steps.forEach((step, i) => {
+                step.classList.toggle('active', i === index);
+            });
+
+            prevBtn.disabled = index === 0;
+            if (index === totalSteps - 1) {
+                nextBtn.textContent = 'Finalizar Curso';
+            } else if (index === totalSteps) { // After summary, effectively at the end
+                 nextBtn.textContent = 'Reiniciar Curso';
+            }
+            else {
+                nextBtn.textContent = 'Siguiente ❯';
+            }
+            // Special handling for "end" state beyond last step
+            nextBtn.disabled = index > totalSteps -1; 
+        }
+
+        function navigate(direction) {
+            const newIndex = currentStepIndex + direction;
+
+            if (currentStepIndex === totalSteps -1 && direction === 1) { // If on summary and clicked "Finalizar"
+                // This state is "after summary", so "Reiniciar" logic applies
+                currentStepIndex++; // Move to a conceptual "end" state
+                nextBtn.textContent = 'Reiniciar Curso';
+                nextBtn.disabled = false; // Enable restart button
+                prevBtn.disabled = false; // Allow going back to summary
+                // Optionally, hide all steps or show a "Curso completado" message
+                // For simplicity, we just change the button text and enable it for restart.
+                // To actually show something else:
+                // steps.forEach(step => step.classList.remove('active'));
+                // document.getElementById('curso-completado-mensaje').style.display = 'block'; (if such an element exists)
+                return;
+            }
+            
+            if (currentStepIndex > totalSteps - 1 && direction === 1) { // If "Reiniciar Curso" is clicked
+                 currentStepIndex = 0;
+                 showStep(currentStepIndex);
+                 return;
+            }
+
+
+            if (newIndex >= 0 && newIndex < totalSteps) {
+                currentStepIndex = newIndex;
+                showStep(currentStepIndex);
+            }
+        }
+
+        // Initialize
+        showStep(currentStepIndex);
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
+
